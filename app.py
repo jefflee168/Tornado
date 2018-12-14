@@ -12,6 +12,7 @@ class MainHandler(tornado.web.RequestHandler):
 
 class ErrorHandler(tornado.web.RequestHandler):
     def get(self):
+	# 将变量 msg 传递给页面 500.html
         self.render("500.html", msg="后台有错，请重试！")
 
 def make_app():
