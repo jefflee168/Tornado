@@ -12,7 +12,7 @@ import tornado.web
 class SleepHandler(tornado.web.RequestHandler):
     def get(self):
         time.sleep(5)
-	self.write("When I sleep")
+	self.write(str(dt.datetime.now()))
 
 if __name__ == "__main__":
     app = tornado.web.Application(
