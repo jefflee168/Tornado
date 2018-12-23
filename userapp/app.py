@@ -15,5 +15,5 @@ def run():
     print('server start on port: {}'.format(port))
     tornado.ioloop.IOLoop.instance().start()
 
-if __name__ == 'main':
+if __name__ == '__main__':
     run()

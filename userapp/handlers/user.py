@@ -1,5 +1,5 @@
 import tornado.web
-from tornado.esape import json_encode
+from tornado.escape import json_encode
 from models.user import UserModel
 
 class UserListHandler(tornado.web.RequestHandler):
