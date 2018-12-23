@@ -10,8 +10,10 @@ import tornado.ioloop
 import tornado.web
 
 class SleepHandler(tornado.web.RequestHandler):
+    @tornado.gen.coroutine
     def get(self):
-        time.sleep(5)
+        #time.sleep(5)
+	yield tornado.gen.sleep(5)
 	self.write(str(dt.datetime.now()))
 
 if __name__ == "__main__":
