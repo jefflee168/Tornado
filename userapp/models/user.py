@@ -1,10 +1,10 @@
 class UserModel(object):
     users = {
-        1:{'name':' zhang', 'age': 10},
-        2:{'name': 'li', 'age': 20},
-        3:{'name': 'zeng', 'age': 30},
-        4:{'name': 'chen', 'age': 40},
-        5:{'name': 'wang', 'age': 50},
+        1: {'name': 'zhang', 'age': 10},
+        2: {'name': 'li', 'age': 20},
+        3: {'name': 'zeng', 'age': 30},
+        4: {'name': 'chen', 'age': 40},
+        5: {'name': 'wang', 'age': 50},
     }
 
     @classmethod

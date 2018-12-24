@@ -2,7 +2,8 @@ import tornado.web
 from handlers import user as user_handlers
 
 HANDLERS = [
-    (r"/api/users", user_handlers.UserListHandler)
+    (r"/api/users", user_handlers.UserListHandler),
+    (r"/api/users/(\d+)", user_handlers.UserHandler),
 ]
 
 def run():
@@ -12,6 +13,7 @@ def run():
     )
     http_server = tornado.httpserver.HTTPServer(app)
     port = 8888
+    http_server.listen(port)
     print('server start on port: {}'.format(port))
     tornado.ioloop.IOLoop.instance().start()
 
